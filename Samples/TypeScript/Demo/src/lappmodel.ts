@@ -868,7 +868,7 @@ export class LAppModel extends CubismUserModel {
 
     this._idParamAngleX = CubismFramework.getIdManager().getId(
       CubismDefaultParameterId.ParamAngleX
-    );
+    ); 
     this._idParamAngleY = CubismFramework.getIdManager().getId(
       CubismDefaultParameterId.ParamAngleY
     );

@@ -19,11 +19,35 @@ export let frameBuffer: WebGLFramebuffer = null;
 
 /**
  * アプリケーションクラス。
+ * ア プ リ ケ ー シ ョ ン
+ * a pu ri kē s h o n
+ * ア (a)
+ * プ (pu)
+ * リ (ri)
+ * ケ (ke)
+ * ー (长音符)
+ * ショ (syo)
+ * ン (n)
+ * ク ku
+ * ラ ra
+ * ス su
  * Cubism SDKの管理を行う。
+ * 
  */
 export class LAppDelegate {
   /**
    * クラスのインスタンス（シングルトン）を返す。
+   * イ i
+   * ン n 
+   * ス su
+   * タ ta
+   * ン n
+   * ス su
+   * 
+   * シ si
+   * グ gu 
+   * ル lu
+   * ト to
    * インスタンスが生成されていない場合は内部でインスタンスを生成する。
    *
    * @return クラスのインスタンス
@@ -61,13 +85,15 @@ export class LAppDelegate {
       canvas.height = LAppDefine.CanvasSize.height;
     }
 
+    // 创建帧缓存
     if (!frameBuffer) {
       frameBuffer = gl.getParameter(gl.FRAMEBUFFER_BINDING);
     }
 
     // 透過設定
+    // 	激活片元的颜色融合计算 TODO 不知效果
     gl.enable(gl.BLEND);
-    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+    gl.blendFunc(gl.DST_COLOR, gl.DST_COLOR);
 
     const supportTouch: boolean = 'ontouchend' in canvas;
 

@@ -59,5 +59,7 @@ export class LAppGlManager {
   /**
    * 解放する。
    */
-  public release(): void {}
+  public release(): void {
+    canvas.remove()
+  }
 }

@@ -19,6 +19,7 @@ import { TouchManager } from './touchmanager';
 
 /**
  * 描画クラス。
+ * 绘画 Class
  */
 export class LAppView {
   /**
@@ -30,17 +31,23 @@ export class LAppView {
     this._gear = null;
 
     // タッチ関係のイベント管理
+    // タta ッtsu(促音，表示停顿，不单独发音) チchi，イi ベbe ンn(ん) トto(と)
+    // 触碰关系的事件管理
     this._touchManager = new TouchManager();
 
     // デバイス座標からスクリーン座標に変換するための
+    // デdeで  バbaば イiい スsuす, かka らra , スsu クku リli  ー(延长音) ンn(ん)，すsu るru たta めme のno
     this._deviceToScreen = new CubismMatrix44();
 
     // 画面の表示の拡大縮小や移動の変換を行う行列
+    // やya和 をo格助词，前接宾语，后接动词  うu  行う 实现的意思
+    TAG
     this._viewMatrix = new CubismViewMatrix();
   }
 
   /**
    * 初期化する。
+   * する suru
    */
   public initialize(): void {
     const { width, height } = canvas;
